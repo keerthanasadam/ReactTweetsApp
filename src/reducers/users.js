@@ -1,4 +1,4 @@
-import { receiveUsers, RECEIVE_USERS } from "./../actions/users";
+import { RECEIVE_USERS } from "./../actions/users";
 
 export default function tweets(state = {}, action) {
   switch (action.type) {
