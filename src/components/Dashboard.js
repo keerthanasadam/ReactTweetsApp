@@ -21,7 +21,7 @@ export class Dashboard extends Component {
 
 function mapStateToProps({ tweets }) {
   return {
-    tweetIds: Object.keys(tweets).sort((a, b) => a.timeStamp - b.timeStamp)
+    tweetIds: Object.keys(tweets).sort((a, b) => b.timeStamp - a.timeStamp)
   };
 }
 export default connect(mapStateToProps)(Dashboard);

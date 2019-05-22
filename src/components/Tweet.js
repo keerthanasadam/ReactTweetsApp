@@ -8,11 +8,13 @@ import {
 } from "react-icons/ti";
 
 import { handleToggleTweet } from "./../actions/tweets";
+import { Link, withRouter } from "react-router-dom";
 
 export class Tweet extends Component {
   toParent(e, id) {
     e.preventDefault();
     // Redirect to parent tweet
+    this.props.history.push(`/tweet/${id}`);
   }
 
   handleLike = e => {
@@ -36,10 +38,11 @@ export class Tweet extends Component {
       parent,
       timestamp,
       likes,
-      replies
+      replies,
+      id
     } = this.props.tweet;
     return (
-      <div className="tweet">
+      <Link className="tweet" to={`/tweet/${id}`}>
         <img src={avatar} className="avatar" alt="User Avatar" />
         <div className="tweet-info">
           <div>
@@ -70,7 +73,7 @@ export class Tweet extends Component {
             <span>{likes !== 0 && likes}</span>
           </div>
         </div>
-      </div>
+      </Link>
     );
   }
 }
@@ -87,4 +90,4 @@ function mapStateToProps({ authedUser, users, tweets }, { id }) {
   };
 }
 
-export default connect(mapStateToProps)(Tweet);
+export default withRouter(connect(mapStateToProps)(Tweet));
