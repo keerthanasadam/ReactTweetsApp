@@ -5,4 +5,4 @@ This repo is a code-along with the first project in the [React Nanodegree progra
 ## Project Setup
 
 - clone the Project - `https://github.com/keerthanasadam/ReactTweetsApp.git`
-- install the dependencies - `yarn install`
+- install the dependencies - `npm install or yarn install`
