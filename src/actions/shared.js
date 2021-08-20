@@ -1,4 +1,4 @@
-import { hideLoading, showLoading } from "react-redux-loading";
+import { hideLoading, showLoading } from "react-redux-loading-bar";
 
 import { getInitialData } from "../utils/api";
 import { setAuthedUser } from "./authedUser";

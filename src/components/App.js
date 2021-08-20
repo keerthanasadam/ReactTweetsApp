@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { handleInitialData } from "./../actions/shared";
 
 import Dashboard from "./Dashboard";
-import LoadingBar from "react-redux-loading";
+import LoadingBar from "react-redux-loading-bar";
 import NewTweet from "./NewTweet";
 import TweetPage from "./TweetPage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
